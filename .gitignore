@@ -1,0 +1,9 @@
+### CUDA template
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
+test.cu
+
