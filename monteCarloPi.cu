@@ -112,7 +112,7 @@ double pi() {
     CHECK_ERR( cudaStreamSynchronize(0 ) );
 
     float milliseconds = 0;
-    cudaEventElapsedTime(&milliseconds, start, stop );
+    cudaEventElapsedTime( &milliseconds, start, stop );
     cout << "Time measured (ms): " << milliseconds << endl;
 
     return 4.0 * m_hits / howMany;
@@ -126,7 +126,7 @@ void pi_reset() {
 int main() {
     pi_init();
     double myPi = pi();
-    cout << setprecision(10 ) << "My Pi: " << myPi << ". Difference: " << fabs( PI - myPi ) << endl;
+    cout << setprecision( 10 ) << "My Pi: " << myPi << ". Difference: " << fabs( PI - myPi ) << endl;
     pi_reset();
 
     return 0;
